@@ -13,11 +13,12 @@
     <div class="container text-center w-50 mt-5 border border-danger-subtle
         fs-4 p-5 rounded-3">
 		<h1>Gioco di Memoria</h1>
-		<p class="p-4">Hai 30 secondi per memorizzare questi 5 numeri:</p>
+		<p class="p-4" id="titolo">Hai 30 secondi per memorizzare questi 5 numeri:</p>
 		<ul class=" d-flex justify-content-center justify-content-between" id="numbers"></ul>
-		<p class="pb-4">Quando il timer è scaduto, inserisci i numeri che hai visto:</p>
-		<form id="input-form">
-			<input type="text" id="input-field">
+		
+		<form id="input-form" class="">
+            <p class="pb-4">Quando il timer è scaduto, inserisci i numeri che hai visto:</p>
+			<input type="text" id="input-field" autocomplete="off">
 			<input type="submit" value="Submit">
 		</form>
 		<p class="pt-4" id="message"></p>
