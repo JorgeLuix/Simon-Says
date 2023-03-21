@@ -18,7 +18,7 @@ let numbers = [];
 			ul.appendChild(li);
 		}
 
-		let secondsLeft = 30;
+		let secondsLeft = 10;
 
 		let timer = setInterval(function() {
 
@@ -29,8 +29,8 @@ let numbers = [];
 				ul.innerHTML = "";
                 titolo.innerHTML = "";
                 titoloDue.innerHTML = "";
-                titoloForm.innerHTML+= `Inserisci i numeri qui: `;
-                
+                titoloForm.innerHTML = `Inserisci i numeri qui: `;
+                messaggio.innerHTML = "";
                 inputfield.focus();
                 
 			} else {
