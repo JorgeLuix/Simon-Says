@@ -5,7 +5,8 @@ let inputfield = document.getElementById('input-field');
 let titoloDue = document.getElementById('titoloDue');
 let titoloForm = document.getElementById('titoloForm');
 
-let numbers = [];
+let numbers = [];//array numeri random
+		console.log("🚀 ~ file: simon.js:9 ~ numbers:", numbers)
 		for (let i = 0; i < 5; i++) {
 			numbers.push(Math.floor(Math.random() * 10));
 		}
@@ -45,18 +46,21 @@ let numbers = [];
 			if (INPUT == numbers.join("-")) {
 				messaggio.innerHTML = `Ottima memoria!`;
 			} else {
-				let correctNumbers = [];
-            console.log("🚀 ~ file: simon.js:49 ~ inputForm.addEventListener ~ correctNumbers:", correctNumbers)
-            let inputNumbers = INPUT.split(" ");
-            for (let i = 0; i < inputNumbers.length; i++) {
-                if (numbers.includes(parseInt(inputNumbers[i]))) {
-                    correctNumbers.push(inputNumbers[i]);
+
+				let correctNumbers = [];//array numeri indovinate.
+
+            let userNumbers = INPUT;//numeri inseriti dall usuario
+            console.log("🚀 ~ file: simon.js:52 ~ inputForm.addEventListener ~ userNumbers:", userNumbers)
+
+            for (let i = 0; i < userNumbers.length; i++) {
+                if (numbers.includes(parseInt(userNumbers[i]))) {
+                    correctNumbers.push(userNumbers[i]);
                 }
             }
             if (correctNumbers.length == 0) {
                 messaggio.innerHTML = "Scusa, non ricordi nessuno dei numeri.";
             } else {
-                messaggio.innerHTML = "Ti sei ricordato " + correctNumbers.length + " numero(i): " + correctNumbers.join(", ");
+                messaggio.innerHTML = "Ti sei ricordato " + correctNumbers.length + " numero(i): " + correctNumbers.join(",");
             }
 	    }
 			
