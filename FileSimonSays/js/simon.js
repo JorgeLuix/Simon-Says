@@ -6,7 +6,6 @@ let titoloDue = document.getElementById('titoloDue');
 let titoloForm = document.getElementById('titoloForm');
 
 let numbers = [];//array numeri random
-		console.log("🚀 ~ file: simon.js:9 ~ numbers:", numbers)
 		for (let i = 0; i < 5; i++) {
 			numbers.push(Math.floor(Math.random() * 10));
 		}
