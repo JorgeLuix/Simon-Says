@@ -18,7 +18,7 @@ let numbers = [];//array numeri random
 			ul.appendChild(li);
 		}
 
-		let secondsLeft = 10;
+		let secondsLeft = 30;
 
 		let timer = setInterval(function() {
 
